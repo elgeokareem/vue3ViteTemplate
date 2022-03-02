@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
-    <p class="parrafo">a ver:{{ lol }}</p>
+    <p class="parrafo">Text enviroment variable:{{ test }}</p>
 
     <button @click="incrementCounter">
       {{ counter.count }}
@@ -13,7 +13,7 @@
 import { useCounterStore } from "../stores/counter";
 
 const counter = useCounterStore()
-const lol = import.meta.env.VITE_LOL
+const test = import.meta.env.VITE_LOL
 
 function incrementCounter() {
   counter.increment()
